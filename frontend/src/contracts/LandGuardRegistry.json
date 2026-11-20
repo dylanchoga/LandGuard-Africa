@@ -1,0 +1,110 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "applicationId",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "registeredBy",
+				"type": "address"
+			}
+		],
+		"name": "ApplicationRegistered",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "applicationId",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "commitment",
+				"type": "bytes32"
+			}
+		],
+		"name": "registerApplication",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "contractOwner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "applicationId",
+				"type": "bytes32"
+			}
+		],
+		"name": "getApplicationProof",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "commitment",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "registeredAt",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "registeredBy",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "applicationId",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "commitment",
+				"type": "bytes32"
+			}
+		],
+		"name": "verifyApplication",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
